@@ -1,0 +1,29 @@
+{
+  "name": "grep_with_multiple_env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "cleanup": "rm -fr cypress/mochawesome/",
+    "merge_reports": "mochawesome-merge cypress/mochawesome/*.json > cypress/mochawesome/output.json",
+    "cy:report": "npm run cleanup; cypress run; npm run merge_reports"
+  },
+  "dependencies": {
+    "faker": "4.1.0",
+    "faker-br": "^0.4.1"
+  },
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "cypress-grep": "^2.5.2",
+    "cypress-mochawesome-reporter": "^2.1.0",
+    "fs-extra": "^10.0.0",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "oracledb": "5.1.0"
+  }
+}
